@@ -37,7 +37,7 @@ body {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-.card img, .activities img{
+.card img, .activities img, .hebergements-card img {
     object-fit: cover;
 }
 
@@ -52,7 +52,11 @@ body {
 .neutral-star {
     color: var(--main-bg-color)
 }
+h2{
+    font-size: 22px;
+}
 
+/**Header**/
 header{
 
     display: flex;
@@ -89,7 +93,7 @@ a:hover{
     border-top: 3px solid;
     padding-top: 21px;
 }
-
+/**Recherche**/
 .search{
     margin-top: 50px;
     margin-bottom: 20px;
@@ -103,6 +107,7 @@ fieldset{
     align-items: center;
     border-style: none;
     padding-left: 0;
+
 
 
 }
@@ -127,11 +132,14 @@ fieldset{
      border-left: none;
      border-bottom: solid var(--main-bg-color);
      font-size: 18px;
-     color: black;
      font-weight: 700;
      line-height: 21.13px;
- }
+     padding-left: 15px;
+      }
 
+#city::placeholder{
+    color:black
+}
  #search_button{
     background-color: var(--main-color);
     border-radius: 0px 15px 15px 0px;
@@ -147,9 +155,7 @@ fieldset{
 
  }
  
- h2{
-     font-size: 22px;
- }
+
 
 #search_filter{
     display:flex;
@@ -168,7 +174,7 @@ fieldset{
     margin-bottom: 8px;
 }
 
-
+/**Filtres**/
 .filter{
     border: solid 2px;
     border-color: #D9D9D9;
@@ -177,31 +183,60 @@ fieldset{
     display: flex;
     align-items: center;
     height: 48px;
-
-
+    animation-name: nohover;
+    animation-duration: 1000ms;
 }
 
-.filter:hover{
 
-    background-color: var(--filter-bg-color);
+@keyframes nohover {
+       0%{
+           transform: scale(1.1);
+           background-color: var(--filter-bg-color);
+       }
+
+    40%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform:scale(1);
+        background-color: #ffffff;
+    }
 }
 
 .fa-money-bill-wave,  .fa-dog, .fa-heart, .fa-person{
     padding: 10px 10px 10px 0px;
 }
 
+.filter:hover{
+    animation-name: zoom;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom {
+    40%{
+        transform: scale(1.2);
+    }
+
+    100%{
+        transform: scale(1.1);
+        background-color: var(--filter-bg-color);
+    }
+}
+
+
+.fa-circle-info{
+    color: var(--main-color);
+}
+
+
 .info{
     display: flex;
     align-items: center;
 
 }
-
 .info p{
     padding-left: 10px;
 }
- .fa-circle-info{
-     color: var(--main-color);
- }
 
 
 
@@ -219,7 +254,7 @@ fieldset{
 }
 
 /****** Hebergements ***********/
-.hebergements {
+#hebergements {
     width: 65%;
 }
 
@@ -244,7 +279,7 @@ fieldset{
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    height: 115px;
+    height: 114px;
 
 }
 
