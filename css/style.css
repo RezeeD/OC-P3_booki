@@ -202,6 +202,7 @@ fieldset{
     display: flex;
     align-items: center;
     height: 48px;
+    font-weight: bold;
     animation-name: nohover;
     animation-duration: 1000ms;
 
@@ -212,6 +213,8 @@ fieldset{
     align-items: center;
     width: 894px;
 }
+
+
 
 
 @keyframes nohover {
