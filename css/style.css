@@ -24,13 +24,9 @@ body {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    margin:0 ;
-    box-sizing: border-box;
-    margin: auto;
 }
 
-.section-title {
-    margin: 0;
+.section-title, h2 {
     font-size: 22px;
 }
 
@@ -45,7 +41,7 @@ body {
     object-fit: cover;
 }
 
-.card-title, h2 {
+.card-title, h2, article, nav, h3  {
     font-size: 16px;
 }
 
@@ -57,11 +53,16 @@ body {
     color: var(--main-bg-color)
 }
 h2{
-    font-size: 22px;
     padding-bottom: 5px;
 }
 
-/**Header**/
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/********Header********/
 header{
     display: flex;
     justify-content: space-between;
@@ -96,22 +97,10 @@ nav a:hover{
     border-top: 3px solid;
 }
 
-
-article, nav, h3 {
-    font-size: 16px;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-
-
 .fa-magnifying-glass{
     display: none;
 }
-/**Recherche**/
+/********Recherche********/
 .search{
     margin-top: 50px;
     margin-bottom: 25px;
@@ -171,8 +160,6 @@ fieldset{
     font-size: 18px;
 
  }
- 
-
 
 #search_filter{
     display:flex;
@@ -180,15 +167,13 @@ fieldset{
     align-items: center;
     margin: 10px;
     width:814px;
-
-    
-
 }
+
 .search h2{
     margin-bottom: 5px;
 }
 
-/**Filtres**/
+/********Filtres********/
 
 
 .filter{
@@ -212,7 +197,7 @@ fieldset{
 
 
 
-
+/********Animations_filtres********/
 @keyframes nohover {
        0%{
            transform: scale(1.1);
@@ -247,7 +232,7 @@ fieldset{
         background-color: var(--filter-bg-color);
     }
 }
-
+/******** Nombre de résultat (bouton "i" + texte)********/
 
 .circle{
     width: 24px;
@@ -336,6 +321,7 @@ fieldset{
 
 }
 
+/********"Afficher plus"********/
 .more{
     padding-top: 45px;
 }
@@ -513,26 +499,16 @@ li{
 
  }
 
-/* Small devices (small display, less than 768px)
-@media (max-width: 960px){
-
-    .filter-container{
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-}*/
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
 
+    .main-container, header, nav, .nav_effect, .search, .filter-container h2, .populaires-cards a, .hebergements-card, .activities-card{
+        width: 100%;
+    }
 .main-container{
     max-width: 767.98px;
     padding: 0;
-    width: 100%;
 }
 
     header{
@@ -540,28 +516,21 @@ li{
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        width: 100%;
 
     }
-    nav{
-        width: 100%;
-    }
+
 
 nav a{
     padding: 0 0 20px 0;
     margin-top:15px;
     border-bottom: 3px solid var(--main-bg-color);
-}
+     }
 
     nav a:hover{
         border-bottom: 3px solid var(--main-color);
     }
 
-    .nav_effect{
-        width: 100%;
-        border-top: none;
-    }
-    .nav_effect:hover{
+    .nav_effect,.nav_effect:hover {
         border-top: none;
     }
 
@@ -569,12 +538,9 @@ nav a{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 100%;
-
     }
 
     .search h2, article, form, .filter-container, .info {
-
         padding:0 15px 0 15px;
     }
     #search_button{
@@ -593,6 +559,8 @@ nav a{
         color: white;
 
     }
+
+    /********bouton "Loupe"********/
     .glass_style{
         display: flex;
         align-items: center;
@@ -604,7 +572,7 @@ nav a{
         border: 1px solid #D9D9D9;
     }
 
-
+    /********Fin bouton"Loupe"********/
 
     #search_filter{
         display:flex;
@@ -614,18 +582,15 @@ nav a{
         align-content: center;
         width: 65%;
         height: 150px;
-
     }
+
     .filter-container{
         display: flex;
         flex-direction: column;
         align-content: space-between;
         min-width: fit-content;
     }
-    .filter-container h2{
-        width: 100%;
 
-    }
 .filter{
     margin: auto;
     min-width: fit-content;
@@ -636,7 +601,7 @@ nav a{
 }
     .hebergements-and-populaires section, .activities, .footer-container {
         border-radius: 0;
-        padding: 0 30px 0 30px;
+        padding: 30px;
     }
 
     .populaires-cards {
@@ -647,9 +612,6 @@ nav a{
 
     }
 
-    .populaires-cards a{
-        width: 100%;
-    }
     .hebergements-and-populaires {
         display: flex;
         flex-direction: column-reverse;
@@ -676,12 +638,7 @@ nav a{
         background-color: white;
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
         height: 199px;
-        width: 100%;
-
     }
-
-
-
       .activities-container{
         display: flex;
         flex-direction: column;
@@ -690,7 +647,6 @@ nav a{
     }
 
     .activities-card{
-        width: 100%;
         height: 150px;
         border-radius: 20px;
         border: 1px none #D9D9D9;
