@@ -419,7 +419,7 @@ fieldset{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 0 0 25px 0;
+    padding: 0 225px 25px 0;
 }
 
 footer h3{
@@ -475,6 +475,10 @@ li{
     .populaires-cards a{
         width:30%;
     }
+    .populaires-cards .card-content{
+        width: 45%;
+    }
+
     .card-title{
         font-size: 14px;
     }
@@ -487,16 +491,25 @@ li{
         height: 220px;
         position: relative;
     }
+
+
     .activities img{
         height: 145px;
     }
     .activities-card .card-content{
-        font-size: 10px;
         padding: 7px 15px 0 15px;
         position: relative;
+
     }
 
+    .align-title-card{
+        width: 65%;
+    }
 
+    .footer-container{
+        padding: 0 100px 25px 0;
+
+    }
  }
 
 
@@ -538,6 +551,11 @@ nav a{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+
+    .search h2{
+        font-size: 22px;
+        width: 85%;
     }
 
     .search h2, .search-description, article, form, .filter-container, .info {
@@ -585,7 +603,7 @@ nav a{
     }
 
     .filter-container{
-        display: flex;
+
         flex-direction: column;
         align-content: space-between;
         min-width: fit-content;
@@ -599,6 +617,10 @@ nav a{
     position:relative;
 
 }
+
+.info p{
+    width: 83%;
+}
     .hebergements-and-populaires section, .activities, .footer-container {
         border-radius: 0;
         padding: 30px;
@@ -611,7 +633,9 @@ nav a{
         box-sizing: content-box;
 
     }
-
+.populaires-cards .card-content{
+    width: 50%;
+}
     .hebergements-and-populaires {
         display: flex;
         flex-direction: column-reverse;
@@ -639,6 +663,10 @@ nav a{
         filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
         height: 199px;
     }
+    
+    .activities-title{
+        width: 46%;
+    }
       .activities-container{
         display: flex;
         flex-direction: column;
@@ -647,7 +675,7 @@ nav a{
     }
 
     .activities-card{
-        height: 150px;
+        height: 240px;
         border-radius: 20px;
         border: 1px none #D9D9D9;
         box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
@@ -656,9 +684,11 @@ nav a{
 
 }
     .activities img{
-       height: 100px;
+       height: 190px;
     }
-
+.align-title-card{
+    width: 100%;
+}
     .footer-container{
         background-color: var(--main-bg-color);
         margin-top: 50px;
